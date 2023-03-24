@@ -39,10 +39,10 @@ local colors = {
   base3          = '#fdf6e3',
   yellow         = '#b58900',
   orange         = '#cb4b16',
-  red            = '#dc322f',
+  red            = '#fc6a5d',
   magenta        = '#d33682',
   violet         = '#6c71c4',
-  blue           = '#268bd2',
+  blue           = '#5b7dde',
   cyan           = '#2aa198',
   green          = '#719e07',
 }

@@ -46,7 +46,7 @@ function M.load_syntax()
     -- This is a comment
     SpecialComment = { fg = colors.gray6, style = 'bold,italic' },
     -- TODO: this is a todo comment
-    Todo = { fg = colors.purple, style = 'bold' },
+    Todo = { fg = colors.blue, style = 'bold' },
 
     LineNr = { fg = colors.gray3 },
     CursorLineNr = { fg = colors.gray8, bg = colors.bg_alt },
@@ -69,7 +69,7 @@ function M.load_syntax()
     PmenuSbar = { fg = colors.fg, bg = colors.gray1 },
     PmenuThumb = { fg = colors.bg, bg = colors.gray8 },
 
-    SpellBad = { fg = colors.orange, style = 'underline' },
+    SpellBad = { fg = colors.red, style = 'underline' },
     SpellCap = {},
     SpellLocal = {},
     SpellRare = {},
@@ -190,7 +190,7 @@ function M.load_syntax()
     Question = {},
     SignColumn = {},
     SpecialKey = {},
-    Substitute = { fg = colors.orange, style = 'bold,reverse' },
+    Substitute = { fg = colors.red, style = 'bold,reverse' },
     TabLine = {},
     TabLineFill = {},
     TabLineSel = { style = 'reverse' },
@@ -223,12 +223,12 @@ function M.load_plugin_syntax()
     DashboardCenter = { fg = colors.fg, bg = colors.bg },
     DashboardFooter = { fg = colors.fg, bg = colors.bg },
 
-    ALEError = { fg = colors.orange },
-    ALEWarning = { fg = colors.orange },
-    ALEInfo = { fg = colors.orange },
-    ALEErrorSign = { fg = colors.orange },
-    ALEWarningSign = { fg = colors.orange },
-    ALEInfoSign = { fg = colors.orange },
+    ALEError = { fg = colors.red },
+    ALEWarning = { fg = colors.red },
+    ALEInfo = { fg = colors.red },
+    ALEErrorSign = { fg = colors.red },
+    ALEWarningSign = { fg = colors.red },
+    ALEInfoSign = { fg = colors.red },
 
     DiffAdd = { fg = colors.neutral_green },
     DiffChange = { fg = colors.neutral_blue },
