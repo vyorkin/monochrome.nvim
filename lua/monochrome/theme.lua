@@ -23,6 +23,24 @@ function M.terminal_color()
   vim.g.terminal_color_15 = colors.gray9
 end
 
+function M.fzf_color()
+  vim.g.fzf_colors = {
+    fg = { "fg", "Normal" },
+    bg = { "bg", "Normal" },
+    hl = { "fg", "Todo" },
+    ["fg+"] = { "fg", "TSString" },
+    ["bg+"] = { "bg", "Normal" },
+    ["hl+"] = { "fg", "Todo" },
+    info = { "fg", "TSString" },
+    border = { "fg", "Ignore" },
+    prompt = { "fg", "Normal" },
+    pointer = { "fg", "ALEError" },
+    marker = { "fg", "TSString" },
+    spinner = { "fg", "Label" },
+    header = { "fg", "ALEError" },
+  }
+end
+
 function M.highlight(group, color)
   if color.link then
     vim.api.nvim_command('highlight! link ' .. group .. ' ' .. color.link)
@@ -355,6 +373,7 @@ function M.colorscheme()
     M.highlight(group, tables)
   end
   M.terminal_color()
+  M.fzf_color()
   local plugin_syntax = M.load_plugin_syntax()
   for group, tables in pairs(plugin_syntax) do
     M.highlight(group, tables)
