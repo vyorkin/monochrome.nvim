@@ -122,9 +122,8 @@ function M.colorize(fg, bg)
   for i, v in pairs(range(first, last, (last - first) / 10)) do
     palette['gray' .. tostring(i - 1)] = hsluv.hpluv_to_hex({ 0, 0, v })
   end
-  palette['gray10'] = nil
+  palette['gray10'] = hsluv.hpluv_to_hex({ 0, 0, 88 })
   palette['gray0'] = nil
-  palette['white'] = hsluv.hpluv_to_hex({ 0, 0, hsluv.hex_to_hsluv(hsluv.hpluv_to_hex({ 0, 0, higher }))[3] })
   palette['black'] = hsluv.hpluv_to_hex({ 0, 0, hsluv.hex_to_hsluv(hsluv.hpluv_to_hex({ 0, 0, lower }))[3] })
   palette['fg'] = hsluv.hpluv_to_hex({ 0, 0, hsluv.hex_to_hsluv(hsluv.hpluv_to_hex({ 0, 0, last }))[3] })
   palette['bg'] = hsluv.hpluv_to_hex({ 0, 0, hsluv.hex_to_hsluv(hsluv.hpluv_to_hex({ 0, 0, first }))[3] })

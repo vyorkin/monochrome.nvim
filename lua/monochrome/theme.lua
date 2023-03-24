@@ -38,7 +38,7 @@ end
 function M.load_syntax()
   local syntax = {
 
-    Normal = { fg = colors.fg, bg = colors.bg },
+    Normal = { fg = colors.gray8, bg = colors.bg },
     Terminal = { fg = colors.fg, bg = colors.bg },
     Visual = { fg = colors.bg, bg = colors.fg },
     VisualNOS = { fg = colors.bg, bg = colors.fg },
@@ -48,7 +48,7 @@ function M.load_syntax()
     -- TODO: this is a todo comment
     Todo = { fg = colors.blue, style = 'bold' },
 
-    LineNr = { fg = colors.gray3 },
+    LineNr = { fg = colors.gray4 },
     CursorLineNr = { fg = colors.gray8, bg = colors.bg_alt },
 
     Cursor = { fg = colors.bg, bg = colors.fg },
@@ -88,21 +88,21 @@ function M.load_syntax()
     TSBoolean = { fg = colors.fg, style = 'bold' },
     TSCharacter = { fg = colors.fg },
     -- this is a comment
-    TSComment = { fg = colors.gray3, style = 'italic' },
-    TSConditional = { fg = colors.gray4 },
+    TSComment = { fg = colors.gray5, style = 'italic' },
+    TSConditional = { fg = colors.gray7 },
     TSConstant = { fg = colors.fg },
-    TSConstBuiltin = { fg = colors.gray3 },
+    TSConstBuiltin = { fg = colors.gray6 },
     TSConstMacro = {},
     TSConstructor = { fg = colors.fg },
     TSError = { style = 'underline,italic' },
     TSException = { style = 'underline,bold' },
     TSField = { fg = colors.gray5 },
     TSFloat = { fg = colors.fg, style = 'bold' },
-    TSFunction = { fg = colors.gray6 },
+    TSFunction = { fg = colors.gray9 },
     TSFuncBuiltin = { fg = colors.gray4 },
     TSFuncMacro = { fg = colors.gray6 },
     TSInclude = { fg = colors.gray7 },
-    TSKeyword = { fg = colors.gray4 },
+    TSKeyword = { fg = colors.gray5 },
     TSKeywordFunction = { fg = colors.gray4 },
     TSKeywordOperator = { fg = colors.gray4 },
     TSKeywordReturn = { fg = colors.gray4 },
@@ -119,7 +119,7 @@ function M.load_syntax()
     TSPunctBracket = { fg = colors.fg },
     TSPunctSpecial = { fg = colors.fg },
     TSRepeat = { fg = colors.gray4 },
-    TSString = { fg = colors.gray9 },
+    TSString = { fg = colors.white },
     TSStringRegex = { fg = colors.gray9 },
     TSStringEscape = { fg = colors.gray9 },
     TSSymbol = { fg = colors.fg },
@@ -140,7 +140,7 @@ function M.load_syntax()
     TSNote = { style = 'bold' },
     TSWarning = { style = 'bold' },
     TSDanger = { style = 'bold' },
-    TSType = { fg = colors.gray4 },
+    TSType = { fg = colors.fg },
     TSTypeBuiltin = { fg = colors.gray4 },
     TSVariable = { fg = colors.gray8 },
     TSVariableBuiltin = { fg = colors.gray8 },
@@ -336,6 +336,9 @@ function M.load_plugin_syntax()
     BufferInactive = { fg = colors.gray3, bg = colors.bg_alt },
     BufferInactiveMod = { fg = colors.gray3, bg = colors.bg_alt, style = 'italic' },
     BufferInactiveSign = { fg = colors.gray3, bg = colors.bg_alt },
+
+    gitcommitSummary = { link = 'Normal' },
+    gitcommitOverflow = { link = 'SpellBad' },
   }
   return plugin_syntax
 end

@@ -45,6 +45,7 @@ local colors = {
   blue           = '#5b7dde',
   cyan           = '#2aa198',
   green          = '#719e07',
+  white          = '#ffffff',
 }
 -- LuaFormatter on
 
