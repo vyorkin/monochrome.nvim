@@ -5,22 +5,22 @@ local colors = require 'monochrome.colors'
 M.colors = colors
 
 function M.terminal_color()
-  vim.g.terminal_color_0 = colors.bg
-  vim.g.terminal_color_1 = colors.faded_red
-  vim.g.terminal_color_2 = colors.faded_green
-  vim.g.terminal_color_3 = colors.faded_yellow
-  vim.g.terminal_color_4 = colors.faded_blue
-  vim.g.terminal_color_5 = colors.faded_purple
-  vim.g.terminal_color_6 = colors.faded_aqua
-  vim.g.terminal_color_7 = colors.fg
-  vim.g.terminal_color_8 = colors.gray1
-  vim.g.terminal_color_9 = colors.bright_red
-  vim.g.terminal_color_10 = colors.bright_green
-  vim.g.terminal_color_11 = colors.bright_yellow
-  vim.g.terminal_color_12 = colors.bright_blue
-  vim.g.terminal_color_13 = colors.bright_purple
-  vim.g.terminal_color_14 = colors.bright_aqua
-  vim.g.terminal_color_15 = colors.gray9
+  vim.g.terminal_color_0 = colors.gray7
+  vim.g.terminal_color_1 = colors.red
+  vim.g.terminal_color_2 = colors.blue
+  vim.g.terminal_color_3 = colors.fg
+  vim.g.terminal_color_4 = colors.white
+  vim.g.terminal_color_5 = colors.fg
+  vim.g.terminal_color_6 = colors.fg
+  vim.g.terminal_color_7 = colors.white
+  vim.g.terminal_color_8 = colors.gray7
+  vim.g.terminal_color_9 = colors.red
+  vim.g.terminal_color_10 = colors.blue
+  vim.g.terminal_color_11 = colors.fg
+  vim.g.terminal_color_12 = colors.white
+  vim.g.terminal_color_13 = colors.fg
+  vim.g.terminal_color_14 = colors.fg
+  vim.g.terminal_color_15 = colors.white
 end
 
 function M.fzf_color()
