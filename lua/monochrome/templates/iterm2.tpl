@@ -6,43 +6,43 @@
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>black}}
+{{>bg}}
 	</dict>
 	<key>Ansi 1 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_red}}
+{{>red}}
 	</dict>
 	<key>Ansi 2 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_green}}
+{{>blue}}
 	</dict>
 	<key>Ansi 3 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_yellow}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 4 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_blue}}
+{{>white}}
 	</dict>
 	<key>Ansi 5 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_purple}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 6 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>faded_aqua}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 7 Color</key>
 	<dict>
@@ -54,49 +54,49 @@
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bg_alt}}
+{{>bg}}
 	</dict>
 	<key>Ansi 9 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_red}}
+{{>red}}
 	</dict>
 	<key>Ansi 10 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_green}}
+{{>blue}}
 	</dict>
 	<key>Ansi 11 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_yellow}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 12 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_blue}}
+{{>white}}
 	</dict>
 	<key>Ansi 13 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_purple}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 14 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bright_aqua}}
+{{>gray10}}
 	</dict>
 	<key>Ansi 15 Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>fg_alt}}
+{{>white}}
 	</dict>
 	<key>Background Color</key>
 	<dict>
@@ -120,7 +120,7 @@
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bg}}
+{{>white}}
 	</dict>
 	<key>Foreground Color</key>
 	<dict>
@@ -132,13 +132,19 @@
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>fg}}
+{{>bg}}
 	</dict>
 	<key>Selection Color</key>
 	<dict>
 		<key>Color Space</key>
 		<string>sRGB</string>
-{{>bg}}
+{{>fg}}
+	</dict>
+	<key>Link Color</key>
+	<dict>
+		<key>Color Space</key>
+		<string>sRGB</string>
+{{>blue}}
 	</dict>
 </dict>
 </plist>
