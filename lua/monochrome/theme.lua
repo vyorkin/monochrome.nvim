@@ -94,7 +94,7 @@ function M.load_syntax()
 
     ModeMsg = {},
     MoreMsg = {},
-    StatusLine = {},
+    StatusLine = { bg = colors.bg_alt },
     StatusLineNC = {},
 
     MatchParen = { style = 'bold' },
