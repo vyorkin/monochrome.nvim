@@ -223,6 +223,7 @@ function M.load_syntax()
     Whitespace = { fg = colors.gray2 },
     PmenuSelBold = {},
     NormalFloat = {},
+    FloatBorder = { link = 'Normal' },
     QuickFixLine = {},
     Debug = {},
     debugBreakpoint = {},
@@ -269,22 +270,16 @@ function M.load_plugin_syntax()
     GitGutterChangeDelete = { fg = colors.neutral_orange },
     GitGutterDelete = { fg = colors.neutral_red },
 
-    LspDiagnosticsVirtualTextError = { fg = colors.faded_red },
-    LspDiagnosticsSignError = { fg = colors.faded_red },
-    LspDiagnosticsFloatingError = { fg = colors.faded_red },
-    LspDiagnosticsVirtualTextWarning = { fg = colors.faded_yellow },
-    LspDiagnosticsSignWarning = { fg = colors.faded_yellow },
-    LspDiagnosticsFloatingWarning = { fg = colors.faded_yellow },
-    LspDiagnosticsVirtualTextInformation = { fg = colors.faded_blue },
-    LspDiagnosticsSignInformation = { fg = colors.faded_blue },
-    LspDiagnosticsFloatingInformation = { fg = colors.faded_blue },
-    LspDiagnosticsVirtualTextHint = { fg = colors.fg },
-    LspDiagnosticsSignHint = { fg = colors.fg },
-    LspDiagnosticsFloatingHint = { fg = colors.fg },
-    LspDiagnosticsUnderlineError = { bg = colors.bg, style = 'undercurl', sp = colors.faded_red },
-    LspDiagnosticsUnderlineWarning = { bg = colors.bg, style = 'undercurl', sp = colors.faded_yellow },
-    LspDiagnosticsUnderlineInformation = { bg = colors.bg, style = 'undercurl', sp = colors.faded_blue },
-    LspDiagnosticsUnderlineHint = { bg = colors.bg, style = 'undercurl', sp = colors.fg },
+    DiagnosticError = { fg = colors.red },
+    DiagnosticWarn = { fg = colors.faded_yellow },
+    DiagnosticInfo = { fg = colors.faded_blue },
+    DiagnosticHint = { fg = colors.fg },
+    DiagnosticOk = { fg = colors.green },
+    DiagnosticUnderlineError = { sp = colors.red, style = 'underline' },
+    DiagnosticUnderlineWarn = { sp = colors.faded_yellow, style = 'underline' },
+    DiagnosticUnderlineInfo = { sp = colors.faded_blue, style = 'underline' },
+    DiagnosticUnderlineHint = { sp = colors.fg, style = 'underline' },
+    DiagnosticUnderlineOk = { sp = colors.green, style = 'underline' },
 
     gitCommitBranch = {},
     gitCommitDiscardedFile = {},
@@ -379,6 +374,16 @@ function M.colorscheme()
     M.highlight(group, tables)
   end
 
+  local signs = {
+    { name = "DiagnosticSignError", text = "✕" },
+    { name = "DiagnosticSignWarn", text = "✕" },
+    { name = "DiagnosticSignHint", text = "‣" },
+    { name = "DiagnosticSignInfo", text = "‣" },
+  }
+
+  for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  end
 end
 
 function M.reset()
