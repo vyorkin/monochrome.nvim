@@ -1,3 +1,3 @@
-local M = require('monochrome.theme')
+local M = require("monochrome.theme")
 
 return M

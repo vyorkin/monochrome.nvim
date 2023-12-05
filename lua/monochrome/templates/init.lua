@@ -1,5 +1,5 @@
 local M = {}
-local iterm2 = require 'monochrome.templates.iterm2'
+local iterm2 = require("monochrome.templates.iterm2")
 
 local config = {}
 
@@ -8,27 +8,27 @@ local function renderColor(name)
 end
 
 local function writeFile(name, content)
-  local f = io.open(name, 'w')
+  local f = io.open(name, "w")
   f:write(content)
   f:close()
 end
 
 local function openTemplate(path)
-  local f = io.open(path, 'r')
+  local f = io.open(path, "r")
   if f then
-    local content = f:read('*all')
+    local content = f:read("*all")
     f:close()
     return content
   else
-    print('[ERROR]no template at ' .. path)
+    print("[ERROR]no template at " .. path)
     return nil
   end
 end
 
-local CURRENT_FOLDER = debug.getinfo(1, 'S').source:sub(2):match('(.*[/\\])')
+local CURRENT_FOLDER = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])")
 
 function M.generate_iterm2_script(path)
-  local colors = require'monochrome'.colors
+  local colors = require("monochrome").colors
   local iterm2_codes = {
     fg = colors.fg,
     bg = colors.bg,
@@ -53,9 +53,9 @@ function M.generate_iterm2_script(path)
     br_cyan = colors.bright_aqua,
     br_white = colors.gray9,
   }
-  local content = ''
+  local content = ""
   for key, value in pairs(iterm2_codes) do
-    local s = [[\033]1337;SetColors=]] .. key .. '=' .. string.gsub(value, '#', '') .. [[\a]]
+    local s = [[\033]1337;SetColors=]] .. key .. "=" .. string.gsub(value, "#", "") .. [[\a]]
     s = 'echo -ne "' .. s .. '"\n'
     content = content .. s
   end
@@ -63,25 +63,22 @@ function M.generate_iterm2_script(path)
 end
 
 function M.generate_bashenv_script(path)
-  local colors = require'monochrome'.colors
-  local content = ''
+  local colors = require("monochrome").colors
+  local content = ""
   for key, value in pairs(colors) do
-    local s = [[export ]] .. key:upper() .. [[=]] .. value .. '\n'
+    local s = [[export ]] .. key:upper() .. [[=]] .. value .. "\n"
     content = content .. s
   end
   writeFile(path, content)
 end
 
 function M.render(path)
-  config.colors = require'monochrome'.colors
-  local tpl = openTemplate(CURRENT_FOLDER .. 'iterm2.tpl')
+  config.colors = require("monochrome").colors
+  local tpl = openTemplate(CURRENT_FOLDER .. "iterm2.tpl")
   if tpl then
-    print('=> Writing file ' .. path)
+    print("=> Writing file " .. path)
     -- LuaFormatter off
-    writeFile(path,
-      tpl
-        :gsub('{{>(.-)}}', renderColor)
-    )
+    writeFile(path, tpl:gsub("{{>(.-)}}", renderColor))
     -- LuaFormatter on
   end
 end
